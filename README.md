@@ -1,16 +1,75 @@
-# React + Vite
+# Production-Ready React + Vite Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository provides a modern, production-ready setup for building scalable React applications with [Vite](https://vitejs.dev/), including hot module replacement, code linting, and environment configuration.
 
-Currently, two official plugins are available:
+## Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Vite** for fast development, optimized build, and static asset management.
+- **React 18+** with latest best practices.
+- **Redux Toolkit** for state management.
+- **ESLint & Prettier** for code quality and consistent formatting.
+- **Environment Variable Support** via `.env` and `import.meta.env`.
+- **Production Build Setup** with optimized bundles and environment-ready deployment.
+- **TypeScript Ready** (TypeScript support recommended for robust production code).
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-## Expanding the ESLint configuration
+2. **Environment Variables**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+   Create a `.env` file in the project root:
+
+   ```
+   VITE_SERVER_ENDPOINT=https://your-api-endpoint.com
+   ```
+
+3. **Run development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production**
+   ```bash
+   npm run build
+   ```
+
+## Code Quality and Best Practices
+
+- **Linting:**  
+  Run `npm run lint` to check for code issues.  
+  ESLint rules can be customized in `.eslintrc`.
+
+- **Formatting:**  
+  Use `npm run format` to auto-format code with Prettier.
+
+- **TypeScript:**  
+  For robust and maintainable production apps, enable TypeScript.  
+  See the [TypeScript template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for details.  
+  To enable type-aware lint rules with `typescript-eslint`, refer to [typescript-eslint docs](https://typescript-eslint.io).
+
+## Production Tips
+
+- Review environment variables and do not commit secrets.
+- Configure correct CORS and API endpoints in `appConfig.js`.
+- Use HTTPS and secure cookies/tokens for authentication.
+- Bundle and deploy using a CDN or cloud provider for best performance.
+
+## Useful Plugins
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react): Uses Babel for Fast Refresh.
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc): Uses SWC for Fast Refresh.
+
+## Resources
+
+- [Vite Documentation](https://vitejs.dev/guide/)
+- [React Documentation](https://react.dev/)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [ESLint](https://eslint.org/)
+
+---
+
+**For custom production needs, audit dependencies and security settings prior to deployment.**
